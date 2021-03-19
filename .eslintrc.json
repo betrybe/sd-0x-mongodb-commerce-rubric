@@ -1,5 +1,4 @@
 {
-  "root": true,
   "env": {
     "mongo": true,
     "browser": true,
@@ -8,7 +7,7 @@
     "node": true,
     "jest": true
   },
-  "extends": "trybe-backend",
+  "extends": ["trybe-backend"],
   "parserOptions": {
     "ecmaVersion": 11,
     "sourceType": "module"
