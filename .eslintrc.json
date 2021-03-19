@@ -13,6 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-undef": "off"
+    "no-undef": "off",
+    "camelcase": "off"
   }
 }
