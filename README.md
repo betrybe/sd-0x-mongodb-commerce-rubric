@@ -24,7 +24,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 
 - [Como Desenvolver](#como-desenvolver)
   - [Análise Estática](#análise-estática)
@@ -56,6 +55,8 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [21 - Retorne o nome dos sanduíches em que o número de curtidas é maior que o número de sanduíches vendidos](#21---retorne-o-nome-dos-sanduíches-em-que-o-número-de-curtidas-é-maior-que-o-número-de-sanduíches-vendidos)
   - [22 - Retorne o nome e a quantidade de vendas (vendidos) dos sanduíches em que o número de vendas é múltiplo de 5](#22---retorne-o-nome-e-a-quantidade-de-vendas-vendidos-dos-sanduíches-em-que-o-número-de-vendas-é-múltiplo-de-5)
 
+- [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+- [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos Finais](#avisos-finais)
 
 ---
@@ -196,22 +197,6 @@ Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso 
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
   4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
   5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
----
-
-### Depois de terminar o desenvolvimento (OPCIONAL)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
 ---
 
@@ -440,6 +425,30 @@ Para isso, escreva no arquivo `desafio20.js` duas queries, **nesta ordem**:
 ### 21 - Retorne o `nome` dos sanduíches em que o número de `curtidas` é maior que o número de sanduíches `vendidos`.
 
 ### 22 - Retorne o `nome` e a quantidade de vendas (`vendidos`) dos sanduíches em que o número de vendas é múltiplo de `5`.
+
+---
+
+# Depois de terminar o desenvolvimento (OPCIONAL)
+
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
+
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
+
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
+
+---
+
+# Revisando um pull request
+
+Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
+
+\#VQV 🚀
 
 ---
 
