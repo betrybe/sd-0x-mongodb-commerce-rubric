@@ -12,84 +12,91 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ---
 
-# SUMÁRIO
+# Sumário
 
 - [Habilidades](#habilidades)
+
 - [Entregáveis](#entregáveis)
   - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
   - [Desenvolvimento](#desenvolvimento)
-  - [Análise Estática](#análise-estática)
-  - [Instruções para restaurar o banco de dados `commerce`](#instruções-para-restaurar-o-banco-de-dados-commerce)
   - [Data de entrega](#data-de-entrega)
-- [Implementações técnicas](#implementações-técnicas)
+
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+
+- [Como Desenvolver](#como-desenvolver)
+  - [Análise Estática](#análise-estática)
+  - [Instruções para restaurar o banco de dados commerce](#instruções-para-restaurar-o-banco-de-dados-commerce)
+  - [Implementações técnicas](#implementações-técnicas)
+  - [Linter](#linter)
+
 - [Requisitos do projeto](#requisitos-do-projeto)
-  - [Desafio 1](#desafio-1)
-  - [Desafio 2](#desafio-2)
-  - [Desafio 3](#desafio-3)
-  - [Desafio 4](#desafio-4)
-  - [Desafio 5](#desafio-5)
-  - [Desafio 6](#desafio-6)
-  - [Desafio 7](#desafio-7)
-  - [Desafio 8](#desafio-8)
-  - [Desafio 9](#desafio-9)
-  - [Desafio 10](#desafio-10)
-  - [Desafio 11](#desafio-11)
-  - [Desafio 12](#desafio-12)
-  - [Desafio 13](#desafio-13)
-  - [Desafio 14](#desafio-14)
-  - [Desafio 15](#desafio-15)
-  - [Desafio 16](#desafio-16)
-  - [Desafio 17](#desafio-17)
-  - [Desafio 18](#desafio-18)
-  - [Desafio 19](#desafio-19)
-  - [Desafio 20](#desafio-20)
-  - [Desafio 21](#desafio-21)
-  - [Desafio 22](#desafio-22)
+  - [1 - Inclua o campo criadoPor em todos os documentos, colocando Ronald McDonald no valor desse campo](#1---inclua-o-campo-criadopor-em-todos-os-documentos-colocando-ronald-mcdonald-no-valor-desse-campo)
+  - [2 - Inclua o campo valorUnitario em todos os documentos em que esse campo não existe e atribua a ele o valor 0.00, com o tipo NumberDecimal](#2---inclua-o-campo-valorunitario-em-todos-os-documentos-em-que-esse-campo-não-existe-e-atribua-a-ele-o-valor-0.00-com-o-tipo-numberdecimal)
+  - [3 - Adicione o campo avaliacao em todos os documentos da coleção e efetue alterações nesse campo](#3---adicione-o-campo-avaliacao-em-todos-os-documentos-da-coleção-e-efetue-alterações-nesse-campo)
+  - [4 - Atribua a data corrente ao campo ultimaModificacao no sanduíche Big Mac](#4---atribua-a-data-corrente-ao-campo-ultimamodificacao-no-sanduíche-big-mac)
+  - [5 - Adicione ketchup aos ingredientes para todos os sanduíches menos o McChicken, garantindo que não haja duplicidade nos ingredientes](#5---adicione-ketchup-aos-ingredientes-para-todos-os-sanduíches-menos-o-mcchicken-garantindo-que-não-haja-duplicidade-nos-ingredientes)
+  - [6 - Inclua bacon no final da lista de ingredientes dos sanduíches Big Mac e Quarteirão com Queijo](#6---inclua-bacon-no-final-da-lista-de-ingredientes-dos-sanduíches-big-mac-e-quarteirão-com-queijo)
+  - [7 - Remova o item cebola de todos os sanduíches](#7---remova-o-item-cebola-de-todos-os-sanduíches)
+  - [8 - Remova o primeiro ingrediente do sanduíche Quarteirão com Queijo](#8---remova-o-primeiro-ingrediente-do-sanduíche-quarteirão-com-queijo)
+  - [9 - Remova o último ingrediente do sanduíche Cheddar McMelt](#9---remova-o-último-ingrediente-do-sanduíche-cheddar-mcmelt)
+  - [10 - Adicione a quantidade de vendas dos sanduíches por dia da semana](#10---adicione-a-quantidade-de-vendas-dos-sanduíches-por-dia-da-semana)
+  - [11 - Insira os elementos combo e tasty no _array_ tags de todos os sanduíches e aproveite para deixar os elementos em ordem alfabética ascendente](#11---insira-os-elementos-combo-e-tasty-no-_array_-tags-de-todos-os-sanduíches-e-aproveite-para-deixar-os-elementos-em-ordem-alfabética-ascendente)
+  - [12 - Ordene em todos os documentos os elementos do _array_ valoresNutricionais pelo campo percentual de forma descendente](#12---ordene-em-todos-os-documentos-os-elementos-do-_array_-valoresnutricionais-pelo-campo-percentual-de-forma-descendente)
+  - [13 - Adicione o elemento muito sódio ao final do _array_ tags nos produtos em que o percentual de sódio seja maior ou igual a 40](#13---adicione-o-elemento-muito-sódio-ao-final-do-_array_-tags-nos-produtos-em-que-o-percentual-de-sódio-seja-maior-ou-igual-a-40)
+  - [14 - Adicione o elemento contém sódio ao final do _array_ tags nos produtos em que o percentual de sódio seja maior do que 20 e menor do que 40](#14---adicione-o-elemento-contém-sódio-ao-final-do-_array_-tags-nos-produtos-em-que-o-percentual-de-sódio-seja-maior-do-que-20-e-menor-do-que-40)
+  - [15 - Conte quantos produtos contêm Mc no nome, sem considerar letras maiúsculas ou minúsculas](#15---conte-quantos-produtos-contêm-mc-no-nome-sem-considerar-letras-maiúsculas-ou-minúsculas)
+  - [16 - Conte quantos produtos têm 4 ingredientes](#16---conte-quantos-produtos-têm-4-ingredientes)
+  - [17 - Conte quantos documentos contêm as palavras frango e hamburguer utilizando o operador $text](#17---conte-quantos-documentos-contêm-as-palavras-frango-e-hamburguer-utilizando-o-operador-text)
+  - [18 - Conte quantos documentos contêm a expressão feito com utilizando o operador $text](#18---conte-quantos-documentos-contêm-a-expressão-feito-com-utilizando-o-operador-text)
+  - [19 - Renomeie o campo descricao para descricaoSite em todos os documentos](#19---renomeie-o-campo-descricao-para-descricaosite-em-todos-os-documentos)
+  - [20 - Remova o campo curtidas do item Big Mac](#20---remova-o-campo-curtidas-do-item-big-mac)
+  - [21 - Retorne o nome dos sanduíches em que o número de curtidas é maior que o número de sanduíches vendidos](#21---retorne-o-nome-dos-sanduíches-em-que-o-número-de-curtidas-é-maior-que-o-número-de-sanduíches-vendidos)
+  - [22 - Retorne o nome e a quantidade de vendas (vendidos) dos sanduíches em que o número de vendas é múltiplo de 5](#22---retorne-o-nome-e-a-quantidade-de-vendas-vendidos-dos-sanduíches-em-que-o-número-de-vendas-é-múltiplo-de-5)
+
+- [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+- [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos Finais](#avisos-finais)
 
 ---
 
 # Habilidades
-Neste projeto, verificamos se voce é capaz de:
+Neste projeto, verificamos se você é capaz de:
 
-  * Utilizar o método updateOne() e updateMany()
+  * Utilizar o método `updateOne()` e `updateMany()`
 
-  * Utilizar os operadores $set , $mul , $inc , $min , $max e $currentDate
+  * Utilizar os operadores `$set`, `$mul`, `$inc`, `$min`, `$max` e `$currentDate`
 
   * Renomear campos e remover campos
 
   * Incorporar dados aos documentos através de arrays
 
-  * Utilizar os operadores $pop , $pull e $push
+  * Utilizar os operadores `$pop`, `$pull` e `$push`
   
-  * Utilizar o operador $addToSet
+  * Utilizar o operador `$addToSet`
 
-  * Utilizar os operadores $each , $slice e $sort
+  * Utilizar os operadores `$each`, `$slice` e `$sort`
 
-  * Utilizar o operador $all para filtrar documentos
+  * Utilizar o operador `$all` para filtrar documentos
 
-  * Utilizar o operador $elemMatch para filtrar documentos
+  * Utilizar o operador `$elemMatch` para filtrar documentos
 
-  * Utilizar o operador $size para filtrar documentos pelo tamanho de arrays
+  * Utilizar o operador `$size` para filtrar documentos pelo tamanho de arrays
 
-  * Utilizar o operador $expr para criar expressões de agregação
+  * Utilizar o operador `$expr` para criar expressões de agregação
 
-  * Utilizar expressões regulares e o operador $regex para buscar documentos
+  * Utilizar expressões regulares e o operador `$regex` para buscar documentos
 
-  * Utilizar o índice textual e o operador $text
+  * Utilizar o índice textual e o operador `$text`
 
-  * Utilizar o operador $mod
+  * Utilizar o operador `$mod`
 
 ---
 
-
 # Entregáveis
 
-# O que deverá ser desenvolvido
+## O que deverá ser desenvolvido
 
 Hoje você fará um projeto com o codinome _commerce_. Neste projeto, você praticará todos os conceitos de **MongoDB** já ensinados até aqui.
 
@@ -121,40 +128,9 @@ Temos, neste projeto, uma série de desafios com diferentes níveis de complexid
 
 4. Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório. Este _Pull Request_ deverá conter no diretório `challenges` os arquivos `desafio1.js`, `desafio2.js` e assim por diante até o `desafio22.js`, que conterão seu código `MQL` de cada desafio, respectivamente.
 
-## ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
+### ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
 Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
-
----
-
-# Análise Estática
-
-Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu código.
-
-Este projeto já vem com as dependências relacionadas ao _linter_ configuradas no arquivos `package.json`.
-
-Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install` dentro do projeto e depois `npm run lint`. Se a análise do `ESLint` encontrar problemas no seu código, tais problemas serão mostrados no seu terminal. Se não houver problema no seu código, nada será impresso no seu terminal.
-
-Devido ao fato de as configurações das regras do `ESLint` dos projetos de front e back **serem diferentes**, **é preciso executar o `ESLint` em cada projeto**.
-
-Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-
----
-
-# Instruções para restaurar o banco de dados `commerce`
-
-1. Abra o terminal e conecte-se à sua instância local do **MongoDB**. Se você receber uma mensagem de erro com uma mensagem como **_Connection refused_**, tente reiniciar sua instância ([veja como fazer isso aqui](https://course.betrybe.com/back-end/mongodb/introduction/#conectando)).
-
-2. Agora que você tem certeza de que a sua instância está no ar e que você está conectado a ela, digite `exit`. Você voltará ao terminal para iniciar a importação dos dados.
-
-3. Na raiz do diretório do projeto, execute o seguinte comando que fará a restauração da base de dados `commerce`:
-   ```sh
-   DBNAME=commerce ./scripts/resetdb.sh assets/produtos
-   ```
-
-- A execução desse script criará um banco de dados chamado `commerce` e importará os dados para a coleção `produtos`.
-
-⚠️ Como tanto esse script quanto o script de execução local dos testes (mostrado na [seção seguinte](#implementações-técnicas)), **restauram a base de dados `commerce`**, se atente a salvar seu progresso nos arquivos de desafio! ⚠️
 
 ---
 
@@ -168,29 +144,15 @@ Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em exten
 
 ---
 
-## Implementações técnicas
+# Instruções para entregar seu projeto
 
-Para executar localmente os testes, é preciso escrever o seguinte no seu terminal, estando na raiz do diretório do projeto:
-
-```sh
-./scripts/evaluate.sh
-```
-
-Esse script passará por **todos os desafios** e imprimirá um relatório indicando se passou ou não para cada desafio. Como a execução do script **envolve restauração da base de dados `commerce`** de um teste para outro, recomenda-se esperar pela sua execução completa.
-
-⚠️ Como na avaliação o banco de dados `commerce` é restaurado de um teste para outro, **se atente a fazer uso do banco restaurado na hora de fazer um desafio**. ⚠️
-
----
-
-## Instruções para entregar seu projeto:
-
-### ANTES DE COMEÇAR A DESENVOLVER:
+### Antes de começar a desenvolver:
 
 1. Clone o repositório
 
-- `git clone git@github.com:tryber/sd-0x-mongodb-commerce-rubric.git`.
+- `git clone git@github.com:tryber/sd-0x-mongodb-commerce.git`.
 - Entre na pasta do repositório que você acabou de clonar:
-  - `cd sd-0x-mongodb-commerce-rubric`
+  - `cd sd-0x-mongodb-commerce`
 
 2. Crie uma branch a partir da branch `master`
 
@@ -218,10 +180,23 @@ Esse script passará por **todos os desafios** e imprimirá um relatório indica
   - Exemplo:
     - `git commit -m 'iniciando o projeto MongoDB Commerce'` (fazendo o primeiro commit)
     - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+    - 
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
 
+- Usando o exemplo anterior: `git push -u origin joaozinho-sd-0x-mongodb-commerce`
+
+6. Crie um novo `Pull Request` _(PR)_
+
+- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-mongodb-commerce/pulls)
+- Clique no botão verde _"New pull request"_
+- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+- Clique no botão verde _"Create pull request"_
+- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+- **Não se preocupe em preencher mais nada por enquanto!**
+- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-mongodb-commerce/pulls) e confira que o seu _Pull Request_ está criado
 ---
 
-### DURANTE O DESENVOLVIMENTO
+### Durante o desenvolvimento
 
 - ⚠ **LEMBRE-SE DE CRIAR TODOS OS ARQUIVOS DENTRO DA PASTA `challenges`** ⚠
 
@@ -238,23 +213,60 @@ Esse script passará por **todos os desafios** e imprimirá um relatório indica
 
 ---
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
+# Como Desenvolver
 
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
+### Análise Estática
 
-- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu código.
 
-  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+Este projeto já vem com as dependências relacionadas ao _linter_ configuradas no arquivos `package.json`.
 
-  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install` dentro do projeto e depois `npm run lint`. Se a análise do `ESLint` encontrar problemas no seu código, tais problemas serão mostrados no seu terminal. Se não houver problema no seu código, nada será impresso no seu terminal.
 
-  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
+Devido ao fato de as configurações das regras do `ESLint` dos projetos de front e back **serem diferentes**, **é preciso executar o `ESLint` em cada projeto**.
 
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
+Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 ---
 
-## Linter
+### Instruções para restaurar o banco de dados `commerce`
+
+1. Abra o terminal e conecte-se à sua instância local do **MongoDB**. Se você receber uma mensagem de erro com uma mensagem como **_Connection refused_**, tente reiniciar sua instância ([veja como fazer isso aqui](https://app.betrybe.com/course/back-end/introducao-ao-mongodb/mongodb-introducao/d396e5a2-d5c9-4f3a-b723-1a1d3ea06b3d/conteudos/b9646f17-77fc-401e-bab5-421fdc37428e/conectando/f63aa7aa-ac8f-4253-bf76-7fc71e4eac5a?use_case=side_bar)).
+
+2. Agora que você tem certeza de que a sua instância está no ar e que você está conectado a ela, digite `exit`. Você voltará ao terminal para iniciar a importação dos dados.
+
+3. Na raiz do diretório do projeto, execute o seguinte comando que fará a restauração da base de dados `commerce`:
+   ```sh
+   DBNAME=commerce ./scripts/resetdb.sh assets/produtos
+   ```
+
+- A execução desse script criará um banco de dados chamado `commerce` e importará os dados para a coleção `produtos`.
+
+⚠️ Como tanto esse script quanto o script de execução local dos testes (mostrado na [seção seguinte](#implementações-técnicas)), **restauram a base de dados `commerce`**, se atente a salvar seu progresso nos arquivos de desafio! ⚠️
+
+---
+
+### Implementações técnicas
+
+Para executar localmente os testes, é preciso escrever o seguinte no seu terminal, estando na raiz do diretório do projeto:
+
+```sh
+./scripts/evaluate.sh
+```
+
+Esse script passará por **todos os desafios** e imprimirá um relatório indicando se passou ou não para cada desafio. Como a execução do script **envolve restauração da base de dados `commerce`** de um teste para outro, recomenda-se esperar pela sua execução completa.
+
+Para executar somente o teste de um desafio, execute o comando abaixo, substituindo N pelo númedo do desafio
+
+```sh
+./scripts/evaluate.sh desafioN
+```
+
+⚠️ Como na avaliação o banco de dados `commerce` é restaurado de um teste para outro, **se atente a fazer uso do banco restaurado na hora de fazer um desafio**. ⚠️
+
+---
+
+### Linter
 
 Para garantir a qualidade do código, vamos utilizar neste projeto o linter ESLint. Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção! Para rodar o *linter* localmente no projeto, execute o comando abaixo: 
 
@@ -268,9 +280,7 @@ Aqui encontram-se os requisitos do projeto. Em cada requisito você encontrara u
 
 # Requisitos do projeto
 
-##### Desafio 1
-
-Inclua o campo `criadoPor` em todos os documentos, colocando `"Ronald McDonald"` no valor desse campo.
+### 1 - Inclua o campo `criadoPor` em todos os documentos, colocando `"Ronald McDonald"` no valor desse campo.
 
 Para isso, escreva no arquivo `desafio1.js` duas queries, **nesta ordem**:
 
@@ -278,9 +288,7 @@ Para isso, escreva no arquivo `desafio1.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `criadoPor` de todos os produtos.
 
-##### Desafio 2
-
-Inclua o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `"0.00"`, com o tipo `NumberDecimal`.
+### 2 - Inclua o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `"0.00"`, com o tipo `NumberDecimal`.
 
 Para isso, escreva no arquivo `desafio2.js` duas queries, **nesta ordem**:
 
@@ -288,9 +296,7 @@ Para isso, escreva no arquivo `desafio2.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `valorUnitario` de todos os produtos.
 
-##### Desafio 3
-
-Adicione o campo `avaliacao` em todos os documentos da coleção e efetue alterações nesse campo.
+### 3 - Adicione o campo `avaliacao` em todos os documentos da coleção e efetue alterações nesse campo.
 
 Para isso, escreva no arquivo `desafio3.js` quatro queries, **nesta ordem**:
 
@@ -302,9 +308,7 @@ Para isso, escreva no arquivo `desafio3.js` quatro queries, **nesta ordem**:
 
 4. Crie uma query que retorne o `nome` e `avaliacao` de todos os sanduíches.
 
-##### Desafio 4
-
-Atribua a data corrente ao campo `ultimaModificacao` no sanduíche `Big Mac`.
+### 4 - Atribua a data corrente ao campo `ultimaModificacao` no sanduíche `Big Mac`.
 
 Para isso, escreva no arquivo `desafio4.js` duas queries, **nesta ordem**:
 
@@ -312,9 +316,7 @@ Para isso, escreva no arquivo `desafio4.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` de todos os documentos em que o campo `ultimaModificacao` existe.
 
-##### Desafio 5
-
-Adicione `ketchup` aos `ingredientes` para todos os sanduíches menos o `McChicken`, garantindo que não haja duplicidade nos `ingredientes`.
+### 5 - Adicione `ketchup` aos `ingredientes` para todos os sanduíches menos o `McChicken`, garantindo que não haja duplicidade nos `ingredientes`.
 
 Para isso, escreva no arquivo `desafio5.js` duas queries, **nesta ordem**:
 
@@ -322,9 +324,7 @@ Para isso, escreva no arquivo `desafio5.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `ingredientes` de todos os documentos.
 
-##### Desafio 6
-
-Inclua `bacon` no final da lista de `ingredientes` dos sanduíches `Big Mac` e `Quarteirão com Queijo`.
+### 6 - Inclua `bacon` no final da lista de `ingredientes` dos sanduíches `Big Mac` e `Quarteirão com Queijo`.
 
 Para isso, escreva no arquivo `desafio6.js` duas queries, **nesta ordem**:
 
@@ -332,9 +332,7 @@ Para isso, escreva no arquivo `desafio6.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `ingredientes` de todos os documentos.
 
-##### Desafio 7
-
-Remova o item `cebola` de todos os sanduíches.
+### 7 - Remova o item `cebola` de todos os sanduíches.
 
 Para isso, escreva no arquivo `desafio7.js` duas queries, **nesta ordem**:
 
@@ -342,9 +340,7 @@ Para isso, escreva no arquivo `desafio7.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `ingredientes` de todos os documentos.
 
-##### Desafio 8
-
-Remova o **primeiro** `ingrediente` do sanduíche `Quarteirão com Queijo`.
+### 8 - Remova o **primeiro** `ingrediente` do sanduíche `Quarteirão com Queijo`.
 
 Para isso, escreva no arquivo `desafio8.js` duas queries, **nesta ordem**:
 
@@ -352,9 +348,7 @@ Para isso, escreva no arquivo `desafio8.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `ingredientes` de todos os documentos.
 
-##### Desafio 9
-
-Remova o **último** `ingrediente` do sanduíche `Cheddar McMelt`.
+### 9 - Remova o **último** `ingrediente` do sanduíche `Cheddar McMelt`.
 
 Para isso, escreva no arquivo `desafio9.js` duas queries, **nesta ordem**:
 
@@ -362,9 +356,7 @@ Para isso, escreva no arquivo `desafio9.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `ingredientes` de todos os documentos.
 
-##### Desafio 10
-
-Adicione a quantidade de vendas dos sanduíches por dia da semana.
+### 10 - Adicione a quantidade de vendas dos sanduíches por dia da semana.
 
 Para isso, escreva no arquivo `desafio10.js` quatro queries, **nesta ordem**:
 
@@ -381,9 +373,7 @@ Para isso, escreva no arquivo `desafio10.js` quatro queries, **nesta ordem**:
 
 4. Crie uma query que retorne o `nome` e `vendasPorDia` de todos os documentos.
 
-##### Desafio 11
-
-Insira os elementos `combo` e `tasty` no _array_ `tags` de todos os sanduíches e aproveite para deixar os elementos em ordem alfabética ascendente.
+### 11 - Insira os elementos `combo` e `tasty` no _array_ `tags` de todos os sanduíches e aproveite para deixar os elementos em ordem alfabética ascendente.
 
 Para isso, escreva no arquivo `desafio11.js` duas queries, **nesta ordem**:
 
@@ -391,9 +381,7 @@ Para isso, escreva no arquivo `desafio11.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `tags` de todos os documentos.
 
-##### Desafio 12
-
-Ordene em todos os documentos os elementos do _array_ `valoresNutricionais` pelo campo `percentual` de forma descendente.
+### 12 - Ordene em todos os documentos os elementos do _array_ `valoresNutricionais` pelo campo `percentual` de forma descendente.
 
 Para isso, escreva no arquivo `desafio12.js` duas queries, **nesta ordem**:
 
@@ -401,9 +389,7 @@ Para isso, escreva no arquivo `desafio12.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `valoresNutricionais` de todos os documentos.
 
-##### Desafio 13
-
-Adicione o elemento `muito sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior ou igual a `40`.
+### 13 - Adicione o elemento `muito sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior ou igual a `40`.
 
 Para isso, escreva no arquivo `desafio13.js` duas queries, **nesta ordem**:
 
@@ -411,9 +397,7 @@ Para isso, escreva no arquivo `desafio13.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `tags` de todos os documentos.
 
-##### Desafio 14
-
-Adicione o elemento `contém sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior do que `20` e menor do que `40`.
+### 14 - Adicione o elemento `contém sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior do que `20` e menor do que `40`.
 
 Para isso, escreva no arquivo `desafio14.js` duas queries, **nesta ordem**:
 
@@ -421,17 +405,11 @@ Para isso, escreva no arquivo `desafio14.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `tags` de todos os documentos.
 
-##### Desafio 15
+### 15 - Conte quantos produtos contêm `Mc` no nome, sem considerar letras maiúsculas ou minúsculas.
 
-Conte quantos produtos contêm `Mc` no nome, sem considerar letras maiúsculas ou minúsculas.
+### 16 - Conte quantos produtos têm `4` ingredientes.
 
-##### Desafio 16
-
-Conte quantos produtos têm `4` ingredientes.
-
-##### Desafio 17
-
-Conte quantos documentos contêm as palavras `frango` e `hamburguer` utilizando o operador `$text`.
+### 17 - Conte quantos documentos contêm as palavras `frango` e `hamburguer` utilizando o operador `$text`.
 
 Para isso, escreva no arquivo `desafio17.js` duas queries, **nesta ordem**:
 
@@ -439,9 +417,7 @@ Para isso, escreva no arquivo `desafio17.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne a quantidade de documentos que contêm as palavras `frango` e `hamburguer` utilizando o operador `$text`.
 
-##### Desafio 18
-
-Conte quantos documentos contêm a **expressão** `feito com` utilizando o operador `$text`.
+### 18 - Conte quantos documentos contêm a **expressão** `feito com` utilizando o operador `$text`.
 
 Para isso, escreva no arquivo `desafio18.js` duas queries, **nesta ordem**:
 
@@ -449,9 +425,7 @@ Para isso, escreva no arquivo `desafio18.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne a quantidade de documentos que contêm a **expressão** `feito com` utilizando o operador `$text`.
 
-##### Desafio 19
-
-Renomeie o campo `descricao` para `descricaoSite` em todos os documentos.
+### 19 - Renomeie o campo `descricao` para `descricaoSite` em todos os documentos.
 
 Para isso, escreva no arquivo `desafio19.js` duas queries, **nesta ordem**:
 
@@ -459,9 +433,7 @@ Para isso, escreva no arquivo `desafio19.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome`, `descricao` e `descricaoSite` de todos os documentos.
 
-##### Desafio 20
-
-Remova o campo `curtidas` do item `Big Mac`.
+### 20 - Remova o campo `curtidas` do item `Big Mac`.
 
 Para isso, escreva no arquivo `desafio20.js` duas queries, **nesta ordem**:
 
@@ -469,22 +441,43 @@ Para isso, escreva no arquivo `desafio20.js` duas queries, **nesta ordem**:
 
 2. Crie uma query que retorne o `nome` e `curtidas` de todos os documentos.
 
-##### Desafio 21
+### 21 - Retorne o `nome` dos sanduíches em que o número de `curtidas` é maior que o número de sanduíches `vendidos`.
 
-Retorne o `nome` dos sanduíches em que o número de `curtidas` é maior que o número de sanduíches `vendidos`.
 
-##### Desafio 22
-
-Retorne o `nome` e a quantidade de vendas (`vendidos`) dos sanduíches em que o número de vendas é múltiplo de `5`.
+### 22 - Retorne o `nome` e a quantidade de vendas (`vendidos`) dos sanduíches em que o número de vendas é múltiplo de `5`.
 
 ---
 
+# Depois de terminar o desenvolvimento (OPCIONAL)
+
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
+
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
+
+
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
+
+---
+
+# Revisando um pull request
+
+Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
+
+\#VQV 🚀
+
+---
 
 # Avisos Finais
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/2OfLJPn)
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
