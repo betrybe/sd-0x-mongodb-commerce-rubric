@@ -1,13 +1,15 @@
 {
-	"nome" : "Big Mac",
-	"tags" : [
-		"bovino",
-		"combo",
-		"pão",
-		"tasty"
-	]
-}
-{ "nome" : "Quarteirão com Queijo", "tags" : [ "combo", "tasty" ] }
-{ "nome" : "Cheddar McMelt", "tags" : [ "combo", "tasty" ] }
-{ "nome" : "McChicken", "tags" : [ "ave", "combo", "tasty" ] }
-{ "nome" : "Extra Chicken", "tags" : [ "ave", "combo", "tasty" ] }
+    "nome": "Quarteirão com Queijo",
+    "curtidas": 13,
+    "vendidos": 39
+  },
+  {
+    "nome": "Cheddar McMelt",
+    "curtidas": 36,
+    "vendidos": 97
+  },
+  {
+    "nome": "Extra Chicken",
+    "curtidas": 64,
+    "vendidos": 71
+  }

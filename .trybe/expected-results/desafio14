@@ -1,5 +1,5 @@
-{ "nome" : "Big Mac", "tags" : [ "bovino", "pão" ] }
-{ "nome" : "Quarteirão com Queijo", "tags" : [ "contém sódio" ] }
-{ "nome" : "Cheddar McMelt", "tags" : [ "contém sódio" ] }
-{ "nome" : "McChicken", "tags" : [ "ave", "contém sódio" ] }
-{ "nome" : "Extra Chicken", "tags" : [ "ave" ] }
+{ "nome" : "Big Mac", "valorUnitario" : NumberDecimal("0.00") }
+{ "nome" : "Quarteirão com Queijo", "valorUnitario" : NumberDecimal("0.00") }
+{ "nome" : "Cheddar McMelt", "valorUnitario" : NumberDecimal("0.00") }
+{ "nome" : "McChicken", "valorUnitario" : NumberDecimal("0.00") }
+{ "nome" : "Extra Chicken", "valorUnitario" : NumberDecimal("0.00") }

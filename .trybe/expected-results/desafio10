@@ -1,60 +1,105 @@
 {
-	"nome" : "Big Mac",
-	"vendasPorDia" : [
-		0,
-		0,
-		0,
-		60,
-		0,
-		0,
-		120
-	]
-}
-{
-	"nome" : "Quarteirão com Queijo",
-	"vendasPorDia" : [
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	]
-}
-{
-	"nome" : "Cheddar McMelt",
-	"vendasPorDia" : [
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	]
-}
-{
-	"nome" : "McChicken",
-	"vendasPorDia" : [
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	]
-}
-{
-	"nome" : "Extra Chicken",
-	"vendasPorDia" : [
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	]
-}
+    "nome": "Big Mac",
+    "valoresNutricionais": [
+      {
+        "tipo": "calorias",
+        "quantidade": 502,
+        "unidadeMedida": "kcal",
+        "percentual": 25
+      },
+      {
+        "tipo": "carboidratos",
+        "quantidade": 45,
+        "unidadeMedida": "gramas",
+        "percentual": 15
+      },
+      {
+        "tipo": "sódio",
+        "quantidade": 1047,
+        "unidadeMedida": "miligramas",
+        "percentual": 44
+      },
+      {
+        "tipo": "proteínas",
+        "quantidade": 27,
+        "unidadeMedida": "gramas",
+        "percentual": 36
+      },
+      {
+        "tipo": "lipídios",
+        "quantidade": 25,
+        "unidadeMedida": "gramas",
+        "percentual": 45
+      }
+    ]
+  },
+  {
+    "nome": "Quarteirão com Queijo",
+    "valoresNutricionais": [
+      {
+        "tipo": "calorias",
+        "quantidade": 528,
+        "unidadeMedida": "kcal",
+        "percentual": 26
+      },
+      {
+        "tipo": "carboidratos",
+        "quantidade": 33,
+        "unidadeMedida": "gramas",
+        "percentual": 11
+      },
+      {
+        "tipo": "sódio",
+        "quantidade": 1072,
+        "unidadeMedida": "miligramas",
+        "percentual": 35
+      },
+      {
+        "tipo": "proteínas",
+        "quantidade": 30,
+        "unidadeMedida": "gramas",
+        "percentual": 40
+      },
+      {
+        "tipo": "lipídios",
+        "quantidade": 31,
+        "unidadeMedida": "gramas",
+        "percentual": 56
+      }
+    ]
+  },
+  {
+    "nome": "Cheddar McMelt",
+    "valoresNutricionais": [
+      {
+        "tipo": "calorias",
+        "quantidade": 468,
+        "unidadeMedida": "kcal",
+        "percentual": 23
+      },
+      {
+        "tipo": "carboidratos",
+        "quantidade": 30,
+        "unidadeMedida": "gramas",
+        "percentual": 10
+      },
+      {
+        "tipo": "sódio",
+        "quantidade": 819,
+        "unidadeMedida": "miligramas",
+        "percentual": 34
+      },
+      {
+        "tipo": "proteínas",
+        "quantidade": 28,
+        "unidadeMedida": "gramas",
+        "percentual": 37
+      },
+      {
+        "tipo": "lipídios",
+        "quantidade": 27,
+        "unidadeMedida": "gramas",
+        "percentual": 48
+      }
+    ]
+  }
