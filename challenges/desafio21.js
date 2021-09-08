@@ -1,3 +1,3 @@
-db.produtos.find({
-  $expr: { $gt: ["$curtidas", "$vendidos"] },
-}, { _id: false, nome: true });
+db.produtos.updateOne({ nome: "Cheddar McMelt" }, { $pop: { ingredientes: 1 } });
+
+db.produtos.find({}, { _id: false, nome: true, ingredientes: true });

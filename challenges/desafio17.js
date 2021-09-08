@@ -1,5 +1,3 @@
-db.produtos.createIndex({ descricao: "text" });
+db.produtos.updateMany({ nome: { $ne: "McChicken" } }, { $addToSet: { ingredientes: "ketchup" } });
 
-db.produtos.find({
-  $text: { $search: "frango hamburguer", $language: "none", $caseSensitive: false },
-}).count();
+db.produtos.find({}, { _id: false, nome: true, ingredientes: true });

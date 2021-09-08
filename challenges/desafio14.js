@@ -1,9 +1,6 @@
-db.produtos.updateMany({
-  valoresNutricionais: {
-    $elemMatch: {
-      tipo: "sódio", percentual: { $gt: 20, $lt: 40 },
-    },
-  } },
-{ $push: { tags: "contém sódio" } });
+db.produtos.updateMany(
+  { valorUnitario: { $exists: false } },
+  { $set: { valorUnitario: NumberDecimal("0.00") } },
+);
 
-db.produtos.find({}, { _id: false, nome: true, tags: true });
+db.produtos.find({}, { _id: false, nome: true, valorUnitario: true });

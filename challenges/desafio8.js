@@ -1,3 +1,1 @@
-db.produtos.updateOne({ nome: "Quarteirão com Queijo" }, { $pop: { ingredientes: -1 } });
-
-db.produtos.find({}, { _id: false, nome: true, ingredientes: true });
+db.produtos.deleteMany({ curtidas: { $lt: 50 } }, { _id: 0 });

@@ -1,6 +1,6 @@
-db.produtos.createIndex(
-  { descricao: "text" },
-  { default_language: "portuguese" },
+db.produtos.updateMany(
+  { nome: { $in: ["Big Mac", "Quarteirão com Queijo"] } },
+  { $push: { ingredientes: "bacon" } },
 );
 
-db.produtos.countDocuments({ $text: { $search: "feito com" } });
+db.produtos.find({}, { _id: false, nome: true, ingredientes: true });

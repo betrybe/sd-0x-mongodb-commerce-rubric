@@ -1,3 +1,4 @@
-db.produtos.updateMany({}, { $push: { tags: { $each: ["combo", "tasty"], $sort: 1 } } });
-
-db.produtos.find({}, { _id: false, nome: true, tags: true });
+db.produtos.find(
+  { nome: { $nin: ['Big Mac', 'McChicken'] } },
+  { _id: 0, nome: 1, curtidas: 1, vendidos: 1 }
+);

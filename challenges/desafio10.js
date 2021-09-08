@@ -1,7 +1,8 @@
-db.produtos.updateMany({}, { $push: { vendasPorDia: { $each: [0, 0, 0, 0, 0, 0, 0] } } });
-
-db.produtos.updateOne({ nome: "Big Mac" }, { $inc: { "vendasPorDia.3": 60 } });
-
-db.produtos.updateMany({ tags: { $all: ["bovino", "pão"] } }, { $inc: { "vendasPorDia.6": 120 } });
-
-db.produtos.find({}, { _id: false, nome: true, vendasPorDia: true });
+db.produtos.find(
+  {
+    valoresNutricionais: {
+      $elemMatch: { tipo: 'proteínas', percentual: { $gte: 30, $lte: 40 } },
+    },
+  },
+  { _id: 0, valoresNutricionais: 1, nome: 1 }
+);
