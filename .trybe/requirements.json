@@ -142,7 +142,7 @@
     },
     {
       "identifier": "desafio29",
-      "description": "29 - Conte quantos documentos contêm as palavras 'frango' e 'hamburguer' utilizando o operador '$text'.",
+      "description": "29 - Conte quantos documentos contêm as palavras 'frango' ou 'hamburguer' utilizando o operador '$text'.",
       "bonus": false
     },
     {
