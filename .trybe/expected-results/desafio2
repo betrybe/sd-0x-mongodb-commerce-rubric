@@ -44,7 +44,7 @@
   "descricao": "Inigualável. Perfeito.\nUm hambúrguer feito com pura carne bovina, envolvida por duas fatias de queijo temperado com ketchup, mostarda, cebola e picles.",
   "curtidas": 13,
   "vendidos": 39
-},
+}
 {
   "nome": "Extra Chicken",
   "ingredientes": [
@@ -92,7 +92,7 @@
   "descricao": "Quem ama frango pede.\nPão com gergelim, frango empanado e crocante, alface crespa, tomate fresquinho e a famosa maionese do McDonald's",
   "curtidas": 64,
   "vendidos": 71
-},
+}
 {
   "nome": "McChicken",
   "ingredientes": [
@@ -139,7 +139,7 @@
   "descricao": "O sabor que você adora.\nFrango empanado e dourado com molho suave e cremoso, acompanhado de alface crocante num pão com gergelim.",
   "curtidas": 108,
   "vendidos": 85
-},
+}
 {
   "nome": "Cheddar McMelt",
   "ingredientes": [
@@ -184,7 +184,7 @@
   "descricao": "Sem palavras para descrever.\nFeito com carne bovina, delicioso queijo tipo cheddar derretido, cebola grelhada ao molho shoyu e para completar um pão escuro com gergelim.",
   "curtidas": 36,
   "vendidos": 97
-},
+}
 {
   "nome": "Big Mac",
   "ingredientes": [

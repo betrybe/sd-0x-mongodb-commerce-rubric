@@ -11,4 +11,4 @@ fi
 mql=$1
 
 # Exec MQL
-mongo $DBNAME --quiet --eval "DBQuery.shellBatchSize = 100000; DBQuery.prototype._prettyShell = true; $mql"
+echo $(mongo $DBNAME --quiet --eval "DBQuery.shellBatchSize = 100000; DBQuery.prototype._prettyShell = true; $mql") | sed 's/ //g'
