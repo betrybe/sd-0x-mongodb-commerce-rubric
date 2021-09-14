@@ -1,9 +1,3 @@
-db.produtos.updateMany({
-  valoresNutricionais: {
-    $elemMatch: {
-      tipo: "sódio", percentual: { $gte: 40 },
-    },
-  } },
-{ $push: { tags: "muito sódio" } });
+db.produtos.updateMany({}, { $set: { criadoPor: "Ronald McDonald" } });
 
-db.produtos.find({}, { _id: false, nome: true, tags: true });
+db.produtos.find({}, { _id: false, nome: true, criadoPor: true });

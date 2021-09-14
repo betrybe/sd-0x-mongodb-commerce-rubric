@@ -1,4 +1,6 @@
-db.produtos.updateMany({}, {
-  $push: { valoresNutricionais: { $each: [], $sort: { percentual: -1 } } } });
+db.resumoProdutos.insertOne({
+  franquia: "McDonald's",
+  totalProdutos: db.produtos.find().count(),
+});
 
-db.produtos.find({}, { _id: false, nome: true, valoresNutricionais: true });
+db.resumoProdutos.findOne({ franquia: "McDonald's" }, { _id: 0 });
