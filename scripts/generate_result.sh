@@ -44,7 +44,10 @@ run_evaluate() {
     mql=$(cat "$mqlFile")
     scripts/exec.sh "$mql" &> "$resultPath"
     # Check result with the expected
-    diff=$(diff "$resultPath" "$TRYBE_DIR/expected-results/$chName")
+
+    $(echo $(echo $(cat "$TRYBE_DIR/expected-results/$chName" | sed 's/ //g' ) | sed 's/ //g') > "$RESULTS_DIR/tmp_$chName")
+
+    diff=$(diff "$resultPath" "$RESULTS_DIR/tmp_$chName")
     if [[ ! -z "$diff" ]]; then
       printf "\n%s: \e[1;31mfailed \e[0m" "$chName" >> "$RESULTS_DIR/evaluation.out"
       print_results
