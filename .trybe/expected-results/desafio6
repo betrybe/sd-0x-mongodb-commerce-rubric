@@ -1,19 +1,19 @@
-  {
-    "nome": "Big Mac",
-    "ingredientes": [
-      "hamburguer",
-      "alface",
-      "queijo",
-      "molho especial",
-      "cebola",
-      "picles",
-      "pão com gergelim"
-    ],
-    "tags": [
-      "bovino",
-      "pão"
-    ],
-    "descricao": "Não existe nada igual\nDois hambúrgures, alface, queijo, molho especial, cebola e picles num pão com gergelim",
-    "curtidas": 145,
-    "vendidos": 137
-  }
+{
+  "nome": "Big Mac",
+  "ingredientes": [
+    "hamburguer",
+    "alface",
+    "queijo",
+    "molho especial",
+    "cebola",
+    "picles",
+    "pão com gergelim"
+  ],
+  "tags": [
+    "bovino",
+    "pão"
+  ],
+  "descricao": "Não existe nada igual\nDois hambúrgures, alface, queijo, molho especial, cebola e picles num pão com gergelim",
+  "curtidas": 145,
+  "vendidos": 137
+}
