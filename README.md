@@ -61,8 +61,8 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [10 - Retorne todos os lanches que tenham o percentual de `proteínas` maior ou igual a `30` e menor ou igual a `40`.](#10---retorne-todos-os-lanches-que-tenham-o-percentual-de-proteínas-maior-ou-igual-a-30-e-menor-ou-igual-a-40)
     - [11 - Retorne o `nome` do produto, a quantidade de `curtidas` e quantos itens foram `vendidos` dos produtos que não sejam iguais a `Big Mac` e `McChicken`.](#11---retorne-o-nome-do-produto-a-quantidade-de-curtidas-e-quantos-itens-foram-vendidos-dos-produtos-que-não-sejam-iguais-a-big-mac-e-mcchicken)
     - [12 - Retorne a quantidade total de produtos em uma nova coleção chamada `resumoProdutos`.](#12---retorne-a-quantidade-total-de-produtos-em-uma-nova-coleção-chamada-resumoprodutos)
-    - [13 - Inclua o campo `criadoPor` em todos os documentos, colocando `"Ronald McDonald"` no valor desse campo.](#13---inclua-o-campo-criadopor-em-todos-os-documentos-colocando-ronald-mcdonald-no-valor-desse-campo)
-    - [14 - Inclua o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `"0.00"`, com o tipo `NumberDecimal`.](#14---inclua-o-campo-valorunitario-em-todos-os-documentos-em-que-esse-campo-não-existe-e-atribua-a-ele-o-valor-000-com-o-tipo-numberdecimal)
+    - [13 - Inclua o campo `criadoPor` em todos os documentos, colocando `Ronald McDonald` no valor desse campo.](#13---inclua-o-campo-criadopor-em-todos-os-documentos-colocando-ronald-mcdonald-no-valor-desse-campo)
+    - [14 - Inclua o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `0.00`, com o tipo `NumberDecimal`.](#14---inclua-o-campo-valorunitario-em-todos-os-documentos-em-que-esse-campo-não-existe-e-atribua-a-ele-o-valor-000-com-o-tipo-numberdecimal)
     - [15 - Adicione o campo `avaliacao` em todos os documentos da coleção e efetue alterações nesse campo.](#15---adicione-o-campo-avaliacao-em-todos-os-documentos-da-coleção-e-efetue-alterações-nesse-campo)
     - [16 - Atribua a data corrente ao campo `ultimaModificacao` no sanduíche `Big Mac`.](#16---atribua-a-data-corrente-ao-campo-ultimamodificacao-no-sanduíche-big-mac)
     - [17 - Adicione `ketchup` aos `ingredientes` para todos os sanduíches menos o `McChicken`, garantindo que não haja duplicidade nos `ingredientes`.](#17---adicione-ketchup-aos-ingredientes-para-todos-os-sanduíches-menos-o-mcchicken-garantindo-que-não-haja-duplicidade-nos-ingredientes)
@@ -323,27 +323,48 @@ Aqui encontram-se os requisitos do projeto. Em cada requisito você encontrara u
 
 ### 1 - Retorne a quantidade de documentos inseridos na coleção `produtos`.
 
+- Para isso, escreva a query no arquivo `desafio1.js`
+
 ### 2 - Ordene a coleção `produtos` pela quantidade de lanches vendidos em ordem crescente.
+
+- Para isso, escreva a query no arquivo `desafio2.js`
 
 ### 3 - Retorne o lanche mais vendido.
 
+- Para isso, escreva a query no arquivo `desafio3.js`
+
 ### 4 - Retorne os lanches que tiveram vendas maiores que `50` e menores que `100`.
+
+- Para isso, escreva a query no arquivo `desafio4.js`
 
 ### 5 - Retorne os lanches que tiveram quantidade de `curtidas` igual a `36` ou tenham a quantidade de vendas igual a `85`.
 
+- Para isso, escreva a query no arquivo `desafio5.js`
+
 ### 6 - Retorne todas as informações do lanche `Big Mac` e não mostre seus `valoresNutricionais`.
+
+- Para isso, escreva a query no arquivo `desafio6.js`
 
 ### 7 - Retorne os lanches que tenham sido `vendidos` com quantidade maior que `90`.
 
+- Para isso, escreva a query no arquivo `desafio7.js`
+
 ### 8 - Delete os lanches que tenham menos de `50` `curtidas`.
+
+- Para isso, escreva a query no arquivo `desafio8.js`
 
 ### 9 - Retorne todos os lanches que possuam `calorias` abaixo de `500`.
 
+- Para isso, escreva a query no arquivo `desafio9.js`
+
 ### 10 - Retorne todos os lanches que tenham o percentual de `proteínas` maior ou igual a `30` e menor ou igual a `40`.
 
+- Para isso, escreva a query no arquivo `desafio10.js`
 - Mostre apenas seu nome e valores nutricionais.
 
 ### 11 - Retorne o `nome` do produto, a quantidade de `curtidas` e quantos itens foram `vendidos` dos produtos que não sejam iguais a `Big Mac` e `McChicken`.
+
+- Para isso, escreva a query no arquivo `desafio11.js`
 
 ### 12 - Retorne a quantidade total de produtos em uma nova coleção chamada `resumoProdutos`.
 
@@ -353,17 +374,17 @@ Aqui encontram-se os requisitos do projeto. Em cada requisito você encontrara u
 
 2. Em uma segunda query, retorne a "franquia" e o totalProdutos do primeiro documento presente na coleção resumoProdutos em que a "franquia" seja McDonald's.
 
-### 13 - Inclua o campo `criadoPor` em todos os documentos, colocando `"Ronald McDonald"` no valor desse campo.
+### 13 - Inclua o campo `criadoPor` em todos os documentos, colocando `Ronald McDonald` no valor desse campo.
 
-Para isso, escreva no arquivo `desafio1.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio13.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que adicione o campo `criadoPor` em todos os documentos, colocando `"Ronald McDonald"` no valor desse campo.
 
 2. Crie uma query que retorne o `nome` e `criadoPor` de todos os produtos.
 
-### 14 - Inclua o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `"0.00"`, com o tipo `NumberDecimal`.
+### 14 - Inclua o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `0.00`, com o tipo `NumberDecimal`.
 
-Para isso, escreva no arquivo `desafio2.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio14.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que adicione o campo `valorUnitario` em todos os documentos em que esse campo não existe e atribua a ele o valor `"0.00"`, com o tipo `NumberDecimal`.
 
@@ -371,7 +392,7 @@ Para isso, escreva no arquivo `desafio2.js` duas queries, **nesta ordem**:
 
 ### 15 - Adicione o campo `avaliacao` em todos os documentos da coleção e efetue alterações nesse campo.
 
-Para isso, escreva no arquivo `desafio3.js` quatro queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio15.js` quatro queries, **nesta ordem**:
 
 1. Crie uma query que inclua o campo `avaliacao` do tipo `NumberInt` e com o valor `0` em todos os documentos da coleção.
 
@@ -383,7 +404,7 @@ Para isso, escreva no arquivo `desafio3.js` quatro queries, **nesta ordem**:
 
 ### 16 - Atribua a data corrente ao campo `ultimaModificacao` no sanduíche `Big Mac`.
 
-Para isso, escreva no arquivo `desafio4.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio16.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que atribua a data corrente ao campo `ultimaModificacao` no sanduíche `Big Mac`. Para a data corrente faça uso do tipo `Date`.
 
@@ -391,7 +412,7 @@ Para isso, escreva no arquivo `desafio4.js` duas queries, **nesta ordem**:
 
 ### 17 - Adicione `ketchup` aos `ingredientes` para todos os sanduíches menos o `McChicken`, garantindo que não haja duplicidade nos `ingredientes`.
 
-Para isso, escreva no arquivo `desafio5.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio17.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que adicione `ketchup` aos `ingredientes` para todos os sanduíches menos o `McChicken`, garantindo que não haja duplicidade nos `ingredientes`.
 
@@ -399,7 +420,7 @@ Para isso, escreva no arquivo `desafio5.js` duas queries, **nesta ordem**:
 
 ### 18 - Inclua `bacon` no final da lista de `ingredientes` dos sanduíches `Big Mac` e `Quarteirão com Queijo`.
 
-Para isso, escreva no arquivo `desafio6.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio18.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a inclusão de `bacon` no final da lista de `ingredientes` dos sanduíches `Big Mac` e `Quarteirão com Queijo`.
 
@@ -407,7 +428,7 @@ Para isso, escreva no arquivo `desafio6.js` duas queries, **nesta ordem**:
 
 ### 19 - Remova o item `cebola` de todos os sanduíches.
 
-Para isso, escreva no arquivo `desafio7.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio19.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a remoção do item `cebola` em todos os sanduíches.
 
@@ -415,7 +436,7 @@ Para isso, escreva no arquivo `desafio7.js` duas queries, **nesta ordem**:
 
 ### 20 - Remova o **primeiro** `ingrediente` do sanduíche `Quarteirão com Queijo`.
 
-Para isso, escreva no arquivo `desafio8.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio20.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a remoção do **primeiro** `ingrediente` no sanduíche `Quarteirão com Queijo`.
 
@@ -423,7 +444,7 @@ Para isso, escreva no arquivo `desafio8.js` duas queries, **nesta ordem**:
 
 ### 21 - Remova o **último** `ingrediente` do sanduíche `Cheddar McMelt`.
 
-Para isso, escreva no arquivo `desafio9.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio21.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a remoção do **último** `ingrediente` no sanduíche `Cheddar McMelt`.
 
@@ -431,7 +452,7 @@ Para isso, escreva no arquivo `desafio9.js` duas queries, **nesta ordem**:
 
 ### 22 - Adicione a quantidade de vendas dos sanduíches por dia da semana.
 
-Para isso, escreva no arquivo `desafio10.js` quatro queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio22.js` quatro queries, **nesta ordem**:
 
 1. Crie uma query que inclua um _array_ com sete posições em todos os sanduíches. Cada uma delas representará um dia da semana, e cada posição iniciará em `0`. O _array_ deve se parecer como abaixo:
    ```json
@@ -448,7 +469,7 @@ Para isso, escreva no arquivo `desafio10.js` quatro queries, **nesta ordem**:
 
 ### 23 - Insira os elementos `combo` e `tasty` no _array_ `tags` de todos os sanduíches e aproveite para deixar os elementos em ordem alfabética ascendente.
 
-Para isso, escreva no arquivo `desafio11.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio23.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça tanto a inserção dos elementos `combo` e `tasty` no _array_ `tags` de todos os sanduíches quanto a ordenação dos elementos de `tags` em ordem alfabética ascendente.
 
@@ -456,7 +477,7 @@ Para isso, escreva no arquivo `desafio11.js` duas queries, **nesta ordem**:
 
 ### 24 - Ordene em todos os documentos os elementos do _array_ `valoresNutricionais` pelo campo `percentual` de forma descendente.
 
-Para isso, escreva no arquivo `desafio12.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio24.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça em todos os documentos a ordenação dos elementos do _array_ `valoresNutricionais` pelo campo `percentual` de forma descendente. Dica: mesmo sem adicionar nenhum novo elemento, para essa operação é necessário utilizar também o modificador `$each`.
 
@@ -464,7 +485,7 @@ Para isso, escreva no arquivo `desafio12.js` duas queries, **nesta ordem**:
 
 ### 25 - Adicione o elemento `muito sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior ou igual a `40`.
 
-Para isso, escreva no arquivo `desafio13.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio25.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a adição do elemento `muito sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior ou igual a `40`.
 
@@ -472,7 +493,7 @@ Para isso, escreva no arquivo `desafio13.js` duas queries, **nesta ordem**:
 
 ### 26 - Adicione o elemento `contém sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior do que `20` e menor do que `40`.
 
-Para isso, escreva no arquivo `desafio14.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio26.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a adição do elemento `contém sódio` ao final do _array_ `tags` nos produtos em que o `percentual` de `sódio` seja maior do que `20` e menor do que `40`.
 
@@ -480,11 +501,14 @@ Para isso, escreva no arquivo `desafio14.js` duas queries, **nesta ordem**:
 
 ### 27 - Conte quantos produtos contêm `Mc` no nome, sem considerar letras maiúsculas ou minúsculas.
 
+- Para isso, escreva a query no arquivo `desafio27.js`
+
 ### 28 - Conte quantos produtos têm `4` ingredientes.
 
+- Para isso, escreva a query no arquivo `desafio28.js`
 ### 29 - Conte quantos documentos contêm as palavras `frango` ou `hamburguer` utilizando o operador `$text`.
 
-Para isso, escreva no arquivo `desafio17.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio29.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a criação de um índice do tipo `text` no campo `descricao` com o idioma padrão `portuguese`.
 
@@ -492,7 +516,7 @@ Para isso, escreva no arquivo `desafio17.js` duas queries, **nesta ordem**:
 
 ### 30 - Conte quantos documentos contêm a **expressão** `feito com` utilizando o operador `$text`.
 
-Para isso, escreva no arquivo `desafio18.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio30.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a criação de um índice do tipo `text` no campo `descricao` com o idioma padrão `portuguese`.
 
@@ -500,7 +524,7 @@ Para isso, escreva no arquivo `desafio18.js` duas queries, **nesta ordem**:
 
 ### 31 - Renomeie o campo `descricao` para `descricaoSite` em todos os documentos.
 
-Para isso, escreva no arquivo `desafio19.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio31.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a renomeação do campo `descricao` para `descricaoSite` em todos os documentos.
 
@@ -508,7 +532,7 @@ Para isso, escreva no arquivo `desafio19.js` duas queries, **nesta ordem**:
 
 ### 32 - Remova o campo `curtidas` do item `Big Mac`.
 
-Para isso, escreva no arquivo `desafio20.js` duas queries, **nesta ordem**:
+Para isso, escreva no arquivo `desafio32.js` duas queries, **nesta ordem**:
 
 1. Crie uma query que faça a remoção do campo `curtidas` do item `Big Mac`.
 
@@ -516,7 +540,11 @@ Para isso, escreva no arquivo `desafio20.js` duas queries, **nesta ordem**:
 
 ### 33 - Retorne o `nome` dos sanduíches em que o número de `curtidas` é maior que o número de sanduíches `vendidos`.
 
+- Para isso, escreva a query no arquivo `desafio33.js`
+
 ### 34 - Retorne o `nome` e a quantidade de vendas (`vendidos`) dos sanduíches em que o número de vendas é múltiplo de `5`.
+
+- Para isso, escreva a query no arquivo `desafio34.js`
 
 ---
 

@@ -1,1 +1,6 @@
-{ "nome" : "Big Mac" }
+  {
+    "nome": "Big Mac",
+    "ultimaModificacao": {
+      "$date": "2021-09-14T12:17:28.912Z"
+    }
+  }
